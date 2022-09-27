@@ -18,13 +18,13 @@ function TopNav() {
         },
     ]
     return (
-        <nav>
+        <header>
             <ul className="flex items-center gap-4 capitalize">
                 {items.map((item, index) => (
                     <NavItem key={index} item={item} />
                 ))}
             </ul>
-        </nav>
+        </header>
     )
 }
 

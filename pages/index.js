@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>MovTime | Home</title>
         <meta name="description" content="Movie App consuming api from TMBD" />
@@ -12,6 +12,6 @@ export default function Home() {
       <h1 className="text-2xl font-bold text-center">
         Home
       </h1>
-    </div>
+    </>
   )
 }

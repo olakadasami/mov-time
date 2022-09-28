@@ -5,7 +5,9 @@ import MovieCardBig from '../components/Home/MovieCard/MovieCardBig'
 
 export default function Home() {
 
-  const popular = useFetchMovies({ type: "popular", page: 1 })
+  const popular = useFetchMovies({ type: "popular", page: '1' })
+
+  console.log(popular)
 
   return (
     <>

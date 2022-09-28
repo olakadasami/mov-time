@@ -4,6 +4,8 @@ function MovieCardBig({ movie_id }) {
 
     const item = useFetchSingleMovie(movie_id)
 
+    console.log(item)
+
     // the image path
     const bgImage = `https://image.tmdb.org/t/p/w500${item.poster_path}`;
 
@@ -28,7 +30,7 @@ function MovieCardBig({ movie_id }) {
                     <p className="">
                         {year} -
                     </p>
-                    {item.genres.map((i) => (
+                    {item.genres?.map((i) => (
                         <p key={i.id} className="title">
                             {i.name}
                         </p>

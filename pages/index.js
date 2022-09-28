@@ -1,13 +1,26 @@
 import Head from 'next/head'
-
-import { useFetchMovies } from '../hooks/useFetchMovies'
-import MovieCardBig from '../components/Home/MovieCard/MovieCardBig'
+import SlidingSection from '../components/Home/Section/SlidingSection'
 
 export default function Home() {
 
-  const popular = useFetchMovies({ type: "popular", page: '1' })
-
-  console.log(popular)
+  const movieSections = [
+    // {
+    //   title: "Latest Movies",
+    //   movies: { type: "latest", page: "" }
+    // },
+    {
+      title: "Popular Movies",
+      movies: { type: "popular", page: '1' }
+    },
+    {
+      title: "Top Rated Movies",
+      movies: { type: "top_rated", page: '1' }
+    },
+    {
+      title: "Upcoming Movies",
+      movies: { type: "upcoming", page: '1' }
+    },
+  ]
 
   return (
     <>
@@ -19,16 +32,14 @@ export default function Home() {
 
       <h1 className="text-2xl mb-8 font-bold text-center">
         Home
-
-
       </h1>
 
-      <div className="flex gap-4 flex-wrap">
-        {popular.map(item => (
-          <MovieCardBig movie_id={item.id} key={item.id} />
+      <div className='flex flex-col gap-10'>
+        {movieSections.map((section, index) => (
+          <SlidingSection key={index} section={section} />
         ))}
-      </div>
 
+      </div>
     </>
 
   )

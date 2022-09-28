@@ -8,7 +8,7 @@ function HomeLayout({ children }) {
 
             <SideNav />
 
-            <main className='col-span-7 py-8 px-6'>
+            <main className='col-span-7 overflow-y-auto py-8 px-6'>
                 <TopNav />
 
                 {/* children refers to the individual pages/routes */}

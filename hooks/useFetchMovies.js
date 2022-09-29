@@ -6,8 +6,9 @@ export function useFetchMovies({ type, page }) {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/${type}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&page=${page}`)
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${type}?api_key=${process.env.API_KEY}&language=en-US&page=${page}`)
             const data = await res.json()
+
 
             setMovies(data.results)
         }

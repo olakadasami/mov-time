@@ -6,30 +6,33 @@ import videoplay from '../../../assets/Icons/video-circle.svg'
 
 function GenreTags({ genre }) {
     return (
-        <p className="capitalize px-5 py-2 rounded-2xl bg-trans backdrop-blur">
+        <p className="capitalize px-5 py-2 rounded-2xl bg-trans-white backdrop-blur">
             {genre.name}
         </p>
     )
 }
 
-
 export default function HeroMovieCard({ movie_id }) {
     const item = useFetchSingleMovie(movie_id)
     // the image path
     const bgImage = `https://image.tmdb.org/t/p/original${item.poster_path}`;
+
     // inline styling for background image
     const style = {
         backgroundImage: `url(${bgImage})`
     }
 
     return (
-        <div style={style} className="w-full h-[70vh] flex items-center p-10 rounded inner-shadow bg-no-repeat bg-cover">
+        <div style={style} className="w-full h-[70vh] relative flex items-center p-10 rounded inner-shadow bg-no-repeat bg-cover">
 
-            <div className="text-primary-light flex flex-col gap-4">
-                <h1 className="text-3xl font-bold">
+            <div className="absolute z-10 top-0 left-0 h-full w-full backdrop"></div>
+
+
+            <div className="text-color-white z-50">
+                <h1 className="text-4xl mb-4 font-bold">
                     {item.title}
                 </h1>
-                <div className="text-sm font-light flex items-center gap-1 text-primary-light flex-wrap">
+                <div className="text-sm mb-8 font-light flex items-center gap-2 flex-wrap">
                     {item.genres?.map((genre) => (
                         <GenreTags key={genre.id} genre={genre} />
                     ))}

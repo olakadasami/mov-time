@@ -23,10 +23,11 @@ function Slider({ movies, slider, component: Component }) {
                         disableOnInteraction: false,
                         pauseOnMouseEnter: slider.pauseOnMouseEnter
                     }}
-                    effects="fade"
+                    effect={slider.effect}
                     fadeEffect={{
                         crossFade: true
                     }}
+                    speed={3000}
                     loop={slider.loop}
                     scrollbar={{ draggable: slider.draggable }}
                     onSwiper={(swiper) => console.log(swiper)}
@@ -42,7 +43,7 @@ function Slider({ movies, slider, component: Component }) {
                     ))}
                 </Swiper>
 
-                : <h2>No movies</h2>
+                : <h2>Error fetching movies</h2>
             }
         </>
     )

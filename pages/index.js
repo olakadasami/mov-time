@@ -33,7 +33,7 @@ export default function Home() {
 
       <HeroSection />
 
-      <div className='flex flex-col gap-10'>
+      <div className='flex mt-10 flex-col gap-10'>
         {movieSections.map((section, index) => (
           <SlidingSection key={index} section={section} />
         ))}

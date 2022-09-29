@@ -13,7 +13,8 @@ module.exports = {
         "secondary-dark": "#1a1a18",
         "color-white": "#fff",
         "color-red": "#c61d26",
-        "trans": "rgba(0,0,0,0.3)"
+        "trans": "rgba(0,0,0,0.3)",
+        "trans-white": "rgba(255,255,255,.3)"
       }
     },
   },

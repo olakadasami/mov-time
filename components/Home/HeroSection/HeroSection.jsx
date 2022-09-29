@@ -9,14 +9,15 @@ function HeroSection() {
 
     // configuring slider options
     const slider = {
-        spaceBetween: 0,
+        spaceBetween: 30,
         slidesPerView: 1,
         autoplay: {
-            delay: 3000
+            delay: 6000
         },
         draggable: false,
         loop: true,
-        pauseOnMouseEnter: false
+        pauseOnMouseEnter: false,
+        effect: "fade"
     }
 
     return (

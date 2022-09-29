@@ -18,7 +18,9 @@ function SlidingSection({ section }) {
         },
         draggable: true,
         loop: true,
-        pauseOnMouseEnter: true
+        pauseOnMouseEnter: true,
+        effect: ""
+
 
     }
 

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import HeroSection from '../components/Home/HeroSection/HeroSection'
 import SlidingSection from '../components/Home/Section/SlidingSection'
 
 export default function Home() {
@@ -30,9 +31,7 @@ export default function Home() {
         <link rel="icon" href="/Logo.svg" />
       </Head>
 
-      <h1 className="text-2xl mb-8 font-bold text-center">
-        Home
-      </h1>
+      <HeroSection />
 
       <div className='flex flex-col gap-10'>
         {movieSections.map((section, index) => (

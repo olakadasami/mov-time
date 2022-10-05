@@ -1,3 +1,10 @@
+# Live preview:
+https://movtime-movie-olakadasami.vercel.app/
+
+# Figma Link:
+https://www.figma.com/file/4IbpmTU6jtpRKdpbFmt4i8/Web-Design-Movie-Dashboard-(Community)-(Copy)?node-id=1%3A2
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -83,7 +83,7 @@ function ListItems({ items, heading }) {
             <h3 className='px-6 text-sm uppercase mb-4 text-gray-500'>
                 {heading}
             </h3>
-            <ul className="flex text-sm md:text-base flex-col gap-5">
+            <ul className="flex flex-col gap-5">
                 {items.map((item, index) => (
                     <NavItem style='border-l-4 border-secondary-dark pl-4 duration-300 active:border-color-red hover:border-color-red' item={item} key={index} />
                 ))}

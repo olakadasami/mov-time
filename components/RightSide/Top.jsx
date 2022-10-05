@@ -7,7 +7,7 @@ import avatar from '../../assets/Avatars/avataaars(5).svg'
 
 function Top() {
     return (
-        <div className="flex mb-8 items-center gap-4">
+        <div className="flex flex-wrap justify-center mb-8 items-center gap-x-4 gap-y-2">
             <Link href="/">
                 <Image src={search} alt='search' />
             </Link>

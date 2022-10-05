@@ -61,7 +61,7 @@ export default function SideNav() {
         }
     ]
     return (
-        <nav className='col-span-2 bg-secondary-dark text-secondary-light'>
+        <>
             <div className="flex gap-2 p-6 mb-10 items-center">
                 <Image src={logo} alt='logo' />
                 <Image src={logotext} alt='logotext' />
@@ -72,7 +72,7 @@ export default function SideNav() {
                 <ListItems heading='social' items={socialItems} />
                 <ListItems heading='user' items={userItems} />
             </div>
-        </nav>
+        </>
     )
 }
 

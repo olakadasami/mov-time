@@ -10,6 +10,7 @@ import 'swiper/css/effect-fade';
 
 
 function Slider({ movies, slider, component: Component }) {
+
     return (
         <>
             {movies?.length > 0 ?
@@ -27,7 +28,9 @@ function Slider({ movies, slider, component: Component }) {
                     fadeEffect={{
                         crossFade: true
                     }}
+                    breakpoints={slider.breakpoints}
                     speed={3000}
+                    reverseDirection={false}
                     loop={slider.loop}
                     scrollbar={{ draggable: slider.draggable }}
                     onSwiper={(swiper) => console.log(swiper)}

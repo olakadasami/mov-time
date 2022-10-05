@@ -23,7 +23,7 @@ export default function HeroMovieCard({ movie_id }) {
     }
 
     return (
-        <div style={style} className="w-full h-[70vh] relative flex items-center p-10 rounded inner-shadow bg-no-repeat bg-cover">
+        <div style={style} className="w-full h-[70vh] relative flex items-center p-6 md:p-10 rounded inner-shadow bg-no-repeat bg-cover">
 
             <div className="absolute z-10 top-0 left-0 h-full w-full backdrop"></div>
 

@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xmd': '800px',
+        // => @media (min-width: 992px) { ... }
+      },
       colors: {
         "primary-light": "#cccccc",
         "primary-dark": "#141312",

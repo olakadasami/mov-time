@@ -17,7 +17,8 @@ function HeroSection() {
         draggable: false,
         loop: true,
         pauseOnMouseEnter: false,
-        effect: "fade"
+        effect: "fade",
+        breakpoints: null
     }
 
     return (

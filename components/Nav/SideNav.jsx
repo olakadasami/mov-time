@@ -61,7 +61,7 @@ export default function SideNav() {
         }
     ]
     return (
-        <nav className='col-span-2 bg-secondary-dark text-secondary-light'>
+        <>
             <div className="flex gap-2 p-6 mb-10 items-center">
                 <Image src={logo} alt='logo' />
                 <Image src={logotext} alt='logotext' />
@@ -72,7 +72,7 @@ export default function SideNav() {
                 <ListItems heading='social' items={socialItems} />
                 <ListItems heading='user' items={userItems} />
             </div>
-        </nav>
+        </>
     )
 }
 
@@ -83,7 +83,7 @@ function ListItems({ items, heading }) {
             <h3 className='px-6 text-sm uppercase mb-4 text-gray-500'>
                 {heading}
             </h3>
-            <ul className="flex flex-col gap-5">
+            <ul className="flex text-sm md:text-base flex-col gap-5">
                 {items.map((item, index) => (
                     <NavItem style='border-l-4 border-secondary-dark pl-4 duration-300 active:border-color-red hover:border-color-red' item={item} key={index} />
                 ))}

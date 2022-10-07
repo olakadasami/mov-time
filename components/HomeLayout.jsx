@@ -22,7 +22,7 @@ function HomeLayout({ children }) {
             </nav>
 
             {/* Mobile Nav */}
-            <nav className={`w-[250px] h-full pt-2 absolute top-0 z-50 ${showNav ? "left-0" : "-left-full"} transition-all duration-300 md:hidden bg-secondary-dark text-secondary-light`}>
+            <nav className={`w-[250px] h-full pt-2 absolute top-0 z-50 ${showNav ? "left-0" : "-left-full"} transition-all ease-in-out duration-300 md:hidden bg-secondary-dark text-secondary-light`}>
                 <SideNav />
             </nav>
 

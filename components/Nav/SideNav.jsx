@@ -62,7 +62,7 @@ export default function SideNav() {
     ]
     return (
         <>
-            <div className="flex gap-2 p-6 mb-10 items-center">
+            <div className="flex gap-2 p-6 mb-6 items-center">
                 <Image src={logo} alt='logo' />
                 <Image src={logotext} alt='logotext' />
             </div>

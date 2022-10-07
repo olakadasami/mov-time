@@ -1,8 +1,10 @@
-import NavItem from './NavItem'
-import logo from '../../assets/Logo/Logo.svg'
 import Image from 'next/image'
 
-function TopNav() {
+import NavItem from './NavItem'
+import logo from '../../assets/Logo/Logo.svg'
+import logotext from '../../assets/Logo/LogoText.svg'
+
+function TopNav({ showNav, toogleNavHandler }) {
 
     const items = [
         {
@@ -19,24 +21,33 @@ function TopNav() {
         },
     ]
     return (
-        <header className="mb-4 flex text-sm sm:text-base justify-between items-center">
+        <header className="mb-4 ">
 
-            <div className="md:hidden">
-                <Image src={logo} width={28} alt='logo' />
+            <div className="flex md:hidden mb-4 justify-between items-center">
+                <div className="flex gap-2 items-center">
+                    <Image src={logo} alt='logo' />
+                    <Image src={logotext} alt='logotext' />
+                </div>
+                <div onClick={toogleNavHandler} className="cursor-pointer">
+                    {showNav ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-7 h-7">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-7 h-8">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    )}
+
+                </div>
             </div>
 
-            <ul className="flex items-center gap-2 sm:gap-4 capitalize">
+            <ul className="flex items-center justify-center md:justify-start gap-4 capitalize">
                 {items.map((item, index) => (
                     <NavItem key={index} item={item} />
                 ))}
             </ul>
 
-            <div className="md:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-7 h-8">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-
-            </div>
         </header>
     )
 }

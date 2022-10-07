@@ -40,7 +40,7 @@ function Slider({ movies, slider, component: Component }) {
                     tag='section'
                 >
                     {movies.map(movie => (
-                        <SwiperSlide tag='li' key={movie.id}>
+                        <SwiperSlide tag='li' className="overflow-hidden" key={movie.id}>
                             <Component movie_id={movie.id} />
                         </SwiperSlide>
                     ))}

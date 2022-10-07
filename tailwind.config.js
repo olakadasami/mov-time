@@ -18,6 +18,7 @@ module.exports = {
         "color-white": "#fff",
         "color-red": "#c61d26",
         "trans": "rgba(0,0,0,0.3)",
+        "trans-2": "rgba(0,0,0,0.5)",
         "trans-white": "rgba(255,255,255,.3)"
       }
     },

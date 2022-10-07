@@ -12,6 +12,7 @@ import parties from '../../assets/Icons/people.svg'
 import friends from '../../assets/Icons/profile-2user.svg'
 import setting from '../../assets/Icons/setting.svg'
 import logout from '../../assets/Icons/logout.svg'
+import Top from '../RightSide/Top'
 
 
 
@@ -62,9 +63,13 @@ export default function SideNav() {
     ]
     return (
         <>
-            <div className="flex gap-2 p-6 mb-10 items-center">
+            <div className="flex gap-2 p-6 xl:mb-6 items-center">
                 <Image src={logo} alt='logo' />
                 <Image src={logotext} alt='logotext' />
+            </div>
+
+            <div className="xl:hidden px-4">
+                <Top />
             </div>
 
             <div className="flex flex-col gap-10">

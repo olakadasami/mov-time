@@ -15,7 +15,7 @@ function SlidingSection({ section }) {
             spaceBetween: 30,
         },
         1600: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 30,
         },
         // 1200: {
@@ -27,7 +27,7 @@ function SlidingSection({ section }) {
             spaceBetween: 20,
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
         },
         476: {
@@ -35,8 +35,8 @@ function SlidingSection({ section }) {
             spaceBetween: 15,
         },
         0: {
-            slidesPerView: 1,
-            spaceBetween: 15,
+            slidesPerView: 2,
+            spaceBetween: 10,
         },
     }
 

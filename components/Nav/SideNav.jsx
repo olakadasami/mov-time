@@ -1,18 +1,15 @@
 import Image from 'next/image'
 
 import NavItem from './NavItem'
+import Top from '../RightSide/Top'
 
 import logo from '../../assets/Logo/Logo.svg'
 import logotext from '../../assets/Logo/LogoText.svg'
 
-import browse from '../../assets/Icons/discover.svg'
-import watchlist from '../../assets/Icons/video-play.svg'
-import calendar from '../../assets/Icons/calendar.svg'
-import parties from '../../assets/Icons/people.svg'
-import friends from '../../assets/Icons/profile-2user.svg'
-import setting from '../../assets/Icons/setting.svg'
-import logout from '../../assets/Icons/logout.svg'
-import Top from '../RightSide/Top'
+import { BiMoviePlay } from 'react-icons/bi'
+import { FaCalendarAlt, FaUsers, FaSignOutAlt, FaCompass } from 'react-icons/fa'
+import { BsFillPeopleFill } from 'react-icons/bs'
+import { RiSettingsFill } from 'react-icons/ri'
 
 
 
@@ -22,17 +19,17 @@ export default function SideNav() {
         {
             title: "Browse",
             href: "/",
-            icon: browse
+            icon: <FaCompass size={22} />
         },
         {
             title: "Watchlist",
             href: "/",
-            icon: watchlist
+            icon: <BiMoviePlay size={22} />
         },
         {
             title: "Coming Soon",
             href: "/",
-            icon: calendar
+            icon: <FaCalendarAlt size={22} />
         },
     ]
 
@@ -40,12 +37,12 @@ export default function SideNav() {
         {
             title: "Friends",
             href: "/",
-            icon: friends
+            icon: <BsFillPeopleFill size={22} />
         },
         {
             title: "Parties",
             href: "/",
-            icon: parties
+            icon: <FaUsers size={22} />
         }
     ]
 
@@ -53,12 +50,12 @@ export default function SideNav() {
         {
             title: "Settings",
             href: "/",
-            icon: setting
+            icon: <RiSettingsFill size={22} />
         },
         {
             title: "Log out",
             href: "/",
-            icon: logout
+            icon: <FaSignOutAlt size={22} />
         }
     ]
     return (

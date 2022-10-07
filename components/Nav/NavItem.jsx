@@ -4,8 +4,10 @@ import React from 'react'
 
 export default function NavItem({ item, style }) {
     return (
-        <li className={`flex gap-3 cursor-pointer items-center ${style}`}>
-            <Image src={item.icon} alt={item.title} />
+        <li className={`flex gap-3 hover:text-color-white text-primary-light cursor-pointer items-center ${style}`}>
+            <div>
+                {item.icon}
+            </div>
             <Link href={item.href}>
                 {item.title}
             </Link>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import NavItem from './NavItem'
+import { TopNavItem } from './NavItem'
 import logo from '../../assets/Logo/Logo.svg'
 import logotext from '../../assets/Logo/LogoText.svg'
 
@@ -43,7 +43,7 @@ function TopNav({ showNav, toogleNavHandler }) {
 
             <ul className="flex items-center justify-center md:justify-start gap-4 capitalize">
                 {items.map((item, index) => (
-                    <NavItem key={index} item={item} />
+                    <TopNavItem key={index} item={item} />
                 ))}
             </ul>
 

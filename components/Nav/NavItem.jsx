@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-function NavItem({ item, style }) {
+export default function NavItem({ item, style }) {
     return (
         <li className={`flex gap-3 cursor-pointer items-center ${style}`}>
             <Image src={item.icon} alt={item.title} />
@@ -13,4 +13,13 @@ function NavItem({ item, style }) {
     )
 }
 
-export default NavItem
+export function TopNavItem({ item, style }) {
+    return (
+        <li className={`flex gap-3 cursor-pointer items-center ${style}`}>
+            <Link href={item.href}>
+                {item.title}
+            </Link>
+        </li>
+    )
+}
+

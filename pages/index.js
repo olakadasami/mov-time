@@ -29,6 +29,7 @@ export default function Home() {
         <title>MovTime</title>
         <meta name="description" content="Movie App consuming api from TMBD" />
         <link rel="icon" href="/Logo.svg" />
+        <title>MovTime | All your favourites in one place</title>
       </Head>
 
       <HeroSection />

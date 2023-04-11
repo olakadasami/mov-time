@@ -29,11 +29,11 @@ function Slider({ movies, slider, component: Component }) {
                 }}
                 breakpoints={slider.breakpoints}
                 speed={3000}
-                reverseDirection={false}
+                // reverseDirection={false}
                 loop={slider.loop}
                 scrollbar={{ draggable: slider.draggable }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
 
                 wrapperTag='ul'
                 tag='section'

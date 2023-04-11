@@ -3,6 +3,7 @@ import { useFetchMovies } from '../../../hooks/useFetchMovies'
 import Slider from '../Slider/Slider'
 import MovieCardBig from '../MovieCard/MovieCardBig'
 import spinner from '../../../assets/Icons/spinner.svg'
+import Image from 'next/image'
 
 function SlidingSection({ section }) {
     // destructure the hook & fetching movies by their type and page; type includes popular etc
@@ -60,16 +61,14 @@ function SlidingSection({ section }) {
                 {section.title}
             </h2>
 
+            {error && <div>Error fetching data, check network connection and reload</div>}
 
-            {isLoading && <div>loading</div>}
+            {isLoading && <div className='grid h-full place-items-center'>
+                <Image src={spinner} alt='loading image' />
+            </div>
+            }
 
-
-            {error ? (
-                <div>Error fetching data, check network connection and reload</div>
-            ) : (
-                <Slider slider={slider} movies={movies} component={MovieCardBig} />
-            )}
-
+            {!error && !isLoading && <Slider slider={slider} movies={movies} component={MovieCardBig} />}
         </div>
     )
 }

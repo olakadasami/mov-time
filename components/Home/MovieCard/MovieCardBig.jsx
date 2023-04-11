@@ -1,5 +1,6 @@
 import { useFetchSingleMovie } from '../../../hooks/useFetchSingleMovie'
 import spinner from '../../../assets/Icons/spinner-small.svg'
+import Image from 'next/image'
 
 function MovieCardBig({ movie_id }) {
 
@@ -9,7 +10,9 @@ function MovieCardBig({ movie_id }) {
     const item = movie
 
     if (isLoading) {
-        return <div>loading</div>
+        return <div>
+            <Image src={spinner} alt='loading image' />
+        </div>
     }
 
     if (error) {

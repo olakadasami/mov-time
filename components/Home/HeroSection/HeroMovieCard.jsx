@@ -13,7 +13,9 @@ export default function HeroMovieCard({ movie_id }) {
     const item = movie
 
     if (isLoading) {
-        return <div>loading</div>
+        return <div className='grid h-full place-items-center'>
+            <Image src={spinner} alt='loading image' />
+        </div>
     }
 
     if (error) {

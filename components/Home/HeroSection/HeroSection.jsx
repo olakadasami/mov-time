@@ -3,6 +3,7 @@ import { useFetchMovies } from '../../../hooks/useFetchMovies'
 import Slider from '../Slider/Slider'
 import HeroMovieCard from './HeroMovieCard'
 import spinner from '../../../assets/Icons/spinner.svg'
+import Image from 'next/image'
 
 
 function HeroSection() {
@@ -24,11 +25,13 @@ function HeroSection() {
     }
 
     if (isLoading) {
-        return <div>loading</div>
+        return <div className='grid h-full place-items-center'>
+            <Image src={spinner} alt='loading image' />
+        </div>
     }
 
     if (error) {
-        return <div>Error fetching data</div>
+        return <div>Error fetching data, check network connection and reload</div>
     }
 
     if (!isLoading && !error) {

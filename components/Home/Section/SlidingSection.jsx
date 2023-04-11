@@ -2,13 +2,13 @@ import { useFetchMovies } from '../../../hooks/useFetchMovies'
 
 import Slider from '../Slider/Slider'
 import MovieCardBig from '../MovieCard/MovieCardBig'
+import spinner from '../../../assets/Icons/spinner.svg'
 
 function SlidingSection({ section }) {
+    // destructure the hook & fetching movies by their type and page; type includes popular etc
+    const { error, isLoading, movies } = useFetchMovies(section.movies)
 
-    // fetching movies by their type and page; type includes popular etc
-    const movies = useFetchMovies(section.movies)
-    console.log("Movies", movies, section.movies.type)
-
+    // swiper breakpoints for the sliding components
     const breakpoints = {
         1900: {
             slidesPerView: 6,
@@ -60,7 +60,15 @@ function SlidingSection({ section }) {
                 {section.title}
             </h2>
 
-            <Slider slider={slider} movies={movies} component={MovieCardBig} />
+
+            {isLoading && <div>loading</div>}
+
+
+            {error ? (
+                <div>Error fetching data, check network connection and reload</div>
+            ) : (
+                <Slider slider={slider} movies={movies} component={MovieCardBig} />
+            )}
 
         </div>
     )

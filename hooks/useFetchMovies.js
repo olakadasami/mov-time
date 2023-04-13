@@ -5,10 +5,13 @@ const fetcher = async (url) => {
     return await res.json()
 }
 
-export function useFetchMovies({ type, page }) {
-    const moviesURL = `https://api.themoviedb.org/3/movie/${type}?api_key=${process.env.API_KEY}&language=en-US&page=${page}`
+export function useFetchMovies({ type, page, initialData }) {
+    // const moviesURL = `https://api.themoviedb.org/3/movie/${type}?api_key=${process.env.API_KEY}&language=en-US${type === 'latest' ? '' : `&page=${page}`}`
+    const moviesURL = `https://api.themoviedb.org/3/movie/${type}?api_key=${process.env.API_KEY}&language=en-US$&page=${page}`
 
-    const { data, isLoading, error } = useSWR(moviesURL, fetcher)
+    const { data, isLoading, error } = useSWR(moviesURL, fetcher, {
+        fallbackData: initialData
+    })
 
     return {
         isLoading: isLoading,

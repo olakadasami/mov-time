@@ -28,7 +28,7 @@ function Slider({ movies, slider, component: Component }) {
                     crossFade: true
                 }}
                 breakpoints={slider.breakpoints}
-                speed={3000}
+                speed={slider.speed}
                 // reverseDirection={false}
                 loop={slider.loop}
                 scrollbar={{ draggable: slider.draggable }}

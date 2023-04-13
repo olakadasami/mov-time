@@ -14,7 +14,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "swiper": "^8.4.2",
-    "swr": "^2.1.0"
+    "swr": "^2.1.0",
+    "zustand": "^4.3.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

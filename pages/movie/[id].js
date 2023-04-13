@@ -45,7 +45,7 @@ const MovieItem = ({ movie }) => {
                 <title>Watch {movie.title}</title>
             </Head>
 
-            <section className="flex flex-col lg:flex-row gap-10">
+            <section className="flex flex-col mt-10 lg:flex-row gap-10">
                 <div className="relative mx-auto w-[300px] lg:w-1/3 min-w-[300px] h-96">
                     <Image layout="fill" src={bgImage} alt={movie.title} />
                 </div>

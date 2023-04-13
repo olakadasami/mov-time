@@ -34,7 +34,7 @@ function MovieCardBig({ movie_id }) {
         const year = new Date(msecs).getFullYear()
 
         return (
-            <Link href={`/movie/${item.id}`} className=''>
+            <Link href={`/movie/${item.id}`} className='cursor-pointer'>
                 <div style={style} className="h-[300px] grid place-items-end hover:scale-105 duration-700 rounded p-2 bg-center bg-no-repeat bg-cover">
                     <div className="backdrop-blur text-color-white w-full rounded bg-trans p-3 ">
                         <h3 className="mb-2 font-semibold">

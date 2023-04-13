@@ -52,7 +52,8 @@ function SlidingSection({ section }) {
         loop: true,
         pauseOnMouseEnter: true,
         effect: "",
-        breakpoints: breakpoints
+        breakpoints: breakpoints,
+        speed: 3000
     }
 
     return (

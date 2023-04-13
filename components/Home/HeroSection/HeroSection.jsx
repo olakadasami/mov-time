@@ -6,9 +6,9 @@ import spinner from '../../../assets/Icons/spinner.svg'
 import Image from 'next/image'
 
 
-function HeroSection() {
+function HeroSection({ initialData }) {
     // destructuring the hook & fetching movies popular
-    const { error, isLoading, movies } = useFetchMovies({ type: "popular", page: "1" })
+    const { error, isLoading, movies } = useFetchMovies({ type: "popular", page: "1", initialData })
 
     // configuring slider options
     const slider = {
@@ -21,7 +21,8 @@ function HeroSection() {
         loop: true,
         pauseOnMouseEnter: false,
         effect: "fade",
-        breakpoints: null
+        breakpoints: null,
+        speed: 10000
     }
 
     if (isLoading) {

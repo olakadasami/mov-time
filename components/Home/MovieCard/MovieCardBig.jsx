@@ -1,6 +1,7 @@
 import { useFetchSingleMovie } from '../../../hooks/useFetchSingleMovie'
 import spinner from '../../../assets/Icons/spinner-small.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function MovieCardBig({ movie_id }) {
 
@@ -33,24 +34,26 @@ function MovieCardBig({ movie_id }) {
         const year = new Date(msecs).getFullYear()
 
         return (
-            <div style={style} className="h-[300px] grid place-items-end hover:scale-105 duration-700 rounded p-2 bg-center bg-no-repeat bg-cover">
-                <div className="backdrop-blur text-color-white w-full rounded bg-trans p-3 ">
-                    <h3 className="mb-2 font-semibold">
-                        {item.title}
-                    </h3>
-                    <div className="text-sm font-light flex items-center gap-1 text-primary-light flex-wrap">
-                        <p className="">
-                            {year}
-                        </p>
-                        <span>&#9830;</span>
-                        {item.genres?.map((genre) => (
-                            <p key={genre.id} className="">
-                                {genre.name}
+            <Link href={`/movie/${item.id}`} className=''>
+                <div style={style} className="h-[300px] grid place-items-end hover:scale-105 duration-700 rounded p-2 bg-center bg-no-repeat bg-cover">
+                    <div className="backdrop-blur text-color-white w-full rounded bg-trans p-3 ">
+                        <h3 className="mb-2 font-semibold">
+                            {item.title}
+                        </h3>
+                        <div className="text-sm font-light flex items-center gap-1 text-primary-light flex-wrap">
+                            <p className="">
+                                {year}
                             </p>
-                        ))}
+                            <span>&#9830;</span>
+                            {item.genres?.map((genre) => (
+                                <p key={genre.id} className="">
+                                    {genre.name}
+                                </p>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         )
     }
 
